@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empleados</title>
+</head>
+<body>
+
+<!-- Barra Lateral -->
+<aside class="sidebar">
+    <div class="logo">⚙️</div>
+    <div class="menu-items">
+        <a href="#" class="active">
+            <i class="fa-solid fa-house"></i> <span>Inicio</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-screwdriver-wrench"></i> <span>Taller</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-clipboard-list"></i> <span>Órdenes</span>
+        </a>
+        <a href="#">
+            <i class="fa-regular fa-circle-check"></i> <span>Mis tareas</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-chart-bar"></i> <span>Reportes</span>
+        </a>
+    </div>
+</aside>
+</aside>
+
+
+
+
+
+<div class="menu-total">
+    <!-- Contenido Principal -->
+<div class="contenido-principal">
+    <header class="barra-busqueda">
+        <input type="search" placeholder="buscar"> 
+        <div class="perfil-usuario">tecnico</div>
+    </header>
+</div>
+
+<!-- los 3 indicadores o iconos superiores -->
+<section class="indicadores">
+    <div class="indicador-1">
+        <h3>EN ESPERA</h3>
+        <div class="progreso" style="--p: 75; --c: orangered;">12</div>
+    </div>
+    <div class="indicador-2">
+        <h3>EN PROCESO</h3>
+        <div class="progreso" style="--p: 40; --c: dodgerblue;">5</div>
+    </div>
+    <div class="indicador-3">
+        <h3>PARA ENTREGAR</h3>
+        <div class="progreso" style="--p: 60; --c: mediumseagreen;">8</div>
+    </div>
+</section>
+
+
+<!-- tareas asignads y resumen de tareas -->
+<div class="tareas-asignadas-resumen">
+    <div class="contenedor-tareas">
+        <section>
+            <h3>MIS TAREAS ASIGNADAS</h3>
+            <Table>
+                <thead>
+                        <tr>
+                            <th>Orden</th>
+                            <th>Estado</th>
+                            <th>Prioridad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1024 - Frenos ABS</td>
+                            <td><span class="estado proceso">En Proceso</span></td>
+                            <td><span class="prioridad alta">ALTA</span></td>
+                        </tr>
+                        <tr>
+                            <td>#1025 - Cambio Aceite</td>
+                            <td><span class="estado espera">En Espera</span></td>
+                            <td><span class="prioridad media">MEDIA</span></td>
+                        </tr>
+                    </tbody>
+            </Table>
+        </section>
+
+        <aside class="resumen">
+            <h3>RESUMEN DE TAREAS</h3>
+            <ul class="lista-resumen">
+                <li style="margin-bottom: 10px;">🟠 5 Diagnósticos</li>
+                <li style="margin-bottom: 10px;">🔵 3 En reparación</li>
+                <li style="margin-bottom: 10px;">🟢 8 Finalizados</li>
+            </ul>
+        <!-- lista de estados de la tarea -->
+
+        </aside>
+    </div>
+    </main>
+</div>
+
+    <div class="nortificacion">
+        <!--  logo e la campana  -->
+    <div class="icono-campana">
+        <i id="iconoCampana" class="bi bi-bell-fill"></i>
+    </div>
+
+    <div class="contenido">
+        <h5 class="titulo">recordatorio</h5>
+        <p class="descripcion">Revisa tus tareas asignadas y actualiza el estado de tus órdenes.</p>
+    </div>
+
+       <!-- Elementos de la Derecha -->
+    <div class="acciones">
+      <span class="fecha">12 de Octubre</span>
+
+
+         <button class="boton-cerrar" aria-label="Cerrar">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+         </button>
+    </div>
+
+    </div>
+</div>
+</body>
+</html>
