@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RREGISTRO</title>
+</head>
+<body>
+    <section id="barra_superior">
+       <div class="logo">
+           <img>
+       </div>
+       <div id="barra_busqueda">
+        <input type="text" id="input_buqueda" placeholder="Buscar">
+        <i></i>
+       </div>
+       <div id="rol">
+        <select name="selector_roles" id="roles">
+            <option value="admin">Admin</option>
+            <option value="tecnico">Tecnico</option>
+            <option value="vendedor">Vendedor</option>
+        </select>
+       </div>
+       <div id="notificaciones">
+        <i></i>
+       </div>
+
+    </section>
+    <section id="zone_sidebar">
+        <aside id="sidebar">
+            <nav id="inicio">
+                <a href="#">Inicio</a>
+                <i></i>
+            </nav>
+            <nav id="ingresos">
+                <a href="#">Ingresos</a>
+                <i></i>
+            </nav>
+            <nav id="taller">
+                <a href="#">Taller</a>
+                <i></i>
+            </nav>
+            <nav id="inventario">
+                <a href="#">Inventario</a>
+                <i></i>
+            </nav>
+            <nav id="reportes">
+                <a href="#">Reportes</a>
+                <i></i>
+            </nav>
+            <nav id="usuario">
+                <a href="#">Usuario</a>
+                <i></i>
+            </nav>
+            <nav id="configuraion">
+                <a href="#">Configuracion</a>
+                <i></i>
+            </nav>
+        </aside>
+
+    </section>
+    <section id="zona_registro">
+        <div>
+            <h3>Registro de ususario</h3>
+            <p>Usuario > Registro de usuario</p>
+        </div>
+        <div id="zona_informacion">
+            <i></i>
+            <h4>Informacion del usuario</h4>
+            <p>Completa los datos para registrar un nuevo usuario en el sistema</p>
+            <label>Nombre*</label>
+            <div>
+                 <input type="text" placeholder="Ingrese su nombre">
+            </div>
+            <label>Apellido*</label>
+            <div>
+                <input type="text" placeholder="Ingrese su apellido">
+            </div>
+            <label>Correo Electronico*</label>
+            <div>
+                <input type="email" placeholder="Ej: usuario@ejemplo.com">
+                <i></i>
+            </div>
+            <label>Telefono*</label>
+            <div>
+                <input type="tel" placeholder="Ej: 3001234567">
+                <i></i>
+            </div>
+            <label>Documento De Identidad*</label>
+            <div>
+                <input type="text" placeholder="Ej: 123456789">
+                <i></i>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
