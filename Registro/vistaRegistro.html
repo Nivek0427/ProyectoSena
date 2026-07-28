@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RREGISTRO</title>
+    <title>REGISTRO</title>
 </head>
 <body>
     <section id="barra_superior">
@@ -15,10 +15,7 @@
         <i></i>
        </div>
        <div id="rol">
-        <select name="selector_roles" id="roles">
-            <option value="admin">Admin</option>
-            <option value="tecnico">Tecnico</option>
-            <option value="vendedor">Vendedor</option>
+        <select name="option_rol">
         </select>
        </div>
        <div id="notificaciones">
@@ -61,20 +58,34 @@
     </section>
     <section id="zona_registro">
         <div>
-            <h3>Registro de ususario</h3>
-            <p>Usuario > Registro de usuario</p>
+            <h3>Registrar Empleado</h3>
+            <p>Complete los datos para registrar un nuevo empleado en el sistema</p>
         </div>
-        <div id="zona_informacion">
-            <i></i>
-            <h4>Informacion del usuario</h4>
-            <p>Completa los datos para registrar un nuevo usuario en el sistema</p>
-            <label>Nombre*</label>
+        <div id="Informacion_personal">
+            <h4>Informacion personal</h4>
+            
+            <label>Nombres*</label>
             <div>
                  <input type="text" placeholder="Ingrese su nombre">
             </div>
-            <label>Apellido*</label>
+            <label>Apellidos*</label>
             <div>
                 <input type="text" placeholder="Ingrese su apellido">
+            </div>
+            <label>Documento*</label>
+            <div>
+                <select name="tipo_documento">
+                    <option value="default" disabled selected>Seleccione el tipo de documento</option>
+                    <option value="CC">Cedula de ciudadania</option>
+                    <option value="CE">Cedula de Extranjeria</option>
+                    <option value="Passport">Pasaporte</option>
+                    <option value="PPT">Permiso por Proteccion Temporal</option>
+
+                </select>
+            </div>
+            <label>Numero de Documento*</label>
+            <div>
+                <input type="text" placeholder="Ej: 123456789">
             </div>
             <label>Correo Electronico*</label>
             <div>
@@ -86,12 +97,54 @@
                 <input type="tel" placeholder="Ej: 3001234567">
                 <i></i>
             </div>
-            <label>Documento De Identidad*</label>
+            <label>Direccion*</label>
             <div>
-                <input type="text" placeholder="Ej: 123456789">
-                <i></i>
+                <input type="text" placeholder="Ej: Calle 123 #45-67">
+            </div>
+            
+        </div>
+        <div id="Informacion_laboral">
+            <h4>Informacion laboral</h4>
+            <label>Rol*</label>
+            <div>
+                <select name="Rol" placeholder="Seleccione el rol del empleado">
+                    <option value="Vendedor">Vendedor</option>
+                    <option value="Tecnico">Tecnico</option>
+                </select>
+                    
+            </div>
+            <label>Cargo</label>
+            <div>
+                <input type="text" placeholder="Ej: Gerente de ventas">
+            </div>
+            <label>Fecha de ingreso*</label>
+            <div>
+                <input type="date">
+            </div>
+            <label>Usuario</label>
+            <div>
+                <input type="text" placeholder="nombre.apellido">
+            </div>
+            <label>Contraseña</label>
+            <div>
+                <input type="password" placeholder="************">
             </div>
         </div>
+        <div id="foto_empleado">
+            <h4>Foto del empleado</h4>
+            <div>
+                <i></i>
+                <button>Subir foto</button>
+                <p>JPG,PNG - Max 2MB </p>
+            </div>
+            <div>
+                <i></i>
+            </div>
+
+
+        </div>
+        <button id="boton_cancelar">cancelar</button>
+        <button id="boton_registrar">Registrar</button>
 
     </section>
 </body>
