@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos_login2.css"><!--aqui va el css-->
     <title>LOGIN ELECTROEMBOBINADOS HERVER</title>
 </head>
 <body>
+    <section id="sistema_gestion">
+        <h2>SISTEMA DE GESTION DE TALLER</h2>
+
+        <div>
+            <i></i>
+            <h4>Gestion de ordenes de trabajo</h4>
+        </div>
+
+        <div>
+            <i></i>
+            <h4>Gestion de inventario</h4>
+        </div>
+
+        <div>
+            <i></i>
+            <h4>Seguimiento de procesos</h4>
+        </div>
+
+        <div>
+            <i></i>
+            <h4>Reportes y estadisticas</h4>
+        </div>
+
+    </section>    
+    <section id="acceso">
     <div class="contenedor-general">
         <div class="encabezado">
             <div class="logo">
@@ -16,14 +40,23 @@
 
         </div>
         <div class="inicio-sesion">
-            <h1>INICIO DE SESION</h1>
-            <label for="USUARIO">USUARIO O CORREO</label>
-            <input type ="text" placecholder="USUARIO O CORREO">
+            <h1>ACCESO AL SISTEMA</h1>
+            <P>Ingresa tus credenciales para continuar</P>
+
+            <label for="USUARIO">USUARIO</label>
+            <input type ="text" placeholder="Ingresa tu usuario">
+
             <label for="CONTRASEÑA">CONTRASEÑA</label>
-            <input type="password" placecholder="CONTRASEÑA">
-            <button type="submit">INICIAR SESION</button>
+            <input type="password" placeholder="Ingresa tu contraseña">
+
+            <div class="recordar-contraseña">
+                <input type="checkbox" id="recordar" name="recordar">
+                <label for="recordar">Recordar sesion</label>
+            </div>
             <a href="#">¿Olvidaste tu contraseña?</a>
-            <a href="#">¿No tienes cuenta? Regístrate</a>
+            <button type="submit">INICIAR SESION</button>
+            
+            
 
 
         </div>
@@ -33,5 +66,6 @@
 
 
     </div>
+    </section>
 </body>
 </html>
