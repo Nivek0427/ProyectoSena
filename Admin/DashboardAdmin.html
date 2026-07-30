@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <section id="sidebar_section">
+        <aside id="sidebar">
+            <div class="logo">
+                <img src="#" alt="Logo">
+            </div>
+            <nav id="inicio">
+                <a href="#">Inicio</a>
+                <i></i>
+            </nav>
+            <nav id="ordenes">
+                <a href="#">Ordenes</a>
+                <i></i>
+            </nav>
+            <nav id="clientes">
+                <a href="#">Clientes</a>
+                <i></i>
+            </nav>
+            <nav id="inventario">
+                <a href="#">Inventario</a>
+                <i></i>
+            </nav>
+            <nav id="empleados">
+                <a href="#">Empleados</a>
+                <i></i>
+            </nav>
+            <nav id="reportes">
+                <a href="#">Reportes</a>
+                <i></i>
+            </nav>
+            <nav id="configuraion">
+                <a href="#">Configuracion</a>
+                <i></i>
+            </nav>
 
+        </aside>
+    </section>
+
+    <section class="top_bar">
+        <div>
+            <div class="search_bar">
+                <input type="text" placeholder="Buscar ordenes">
+                <i></i>
+            </div>
+            <div class="user_profile">
+                <img src="#">
+                <span>Admin</span>
+            </div>
+            <div class="notifications">
+                <i></i>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="main_content">
+        <div id="dashboard_content">
+            <div class="dashboard_header">
+                <h1>Dashboard</h1>
+                <p>Resumen general del taller</p>
+            </div>
+            <div class="dashboard_body">
+                <div class="orders_preview_cards">
+                    <div class="card">
+                        <h4>Ordenes en espera</h4>
+                        <p>10</p>
+                        <div class="icon_order_state">
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h4>Ordenes en proceso</h4>
+                        <p>15</p>
+                        <div class="icon_order_state">
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h4>Ordenes  listas para entregar</h4>
+                        <p>7</p>
+                        <div class="icon_order_state">
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h4>Ordenes entregadas hoy</h4>
+                        <p>3</p>
+                        <div class="icon_order_state">
+                            <i></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent_orders_table">
+                    <h3>Ordenes recientes</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#Orden</th>
+                                <th>Cliente</th>
+                                <th>Equipo</th>
+                                <th>Estado</th>
+                                <th>Técnico</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>Juan Perez</td>
+                                <td>Bomba Siemens</td>
+                                <td>En espera</td>
+                                <td>Pedro Martinez</td>
+                                <td>2024-06-15</td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Maria Lopez</td>
+                                <td>Motor WEG 10HP</td>
+                                <td>En proceso</td>
+                                <td>Pedro Martinez</td>
+                                <td>2024-06-16</td>
+                            </tr>
+                            <tr>
+                                <td>#003</td>
+                                <td>Carlos Sanchez</td>
+                                <td>Bomba Pedrollo</td>
+                                <td>Listo para entregar</td>
+                                <td>Pedro Martinez</td>
+                                <td>2024-06-17</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <button id="view_all_orders">Ver todas</button>
+                </div>
+                <div id="revenue_chart">
+                    <h3>Ingresos del día</h3>
+                    <h4>$1,500.00</h4>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div id="info_active_technicians">
+                    <h3>Técnicos activos</h3>
+                    <ul>
+                        <li>Pedro Martinez</li>
+                        <p>En taller</p>
+                        <li>Juan Lopez</li>
+                        <p>En taller</p>
+                        <li>Maria Gonzalez</li>
+                        <p>En taller</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
