@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Empleados</title>
 </head>
 <body>
     <section id="sidebar_section">
@@ -96,5 +96,12 @@
                 </div>
         </div>
     </section>
+    <script>
+        //hacer que boton de nuevo empleado redirija a la pagina de registro
+        const addEmployeeButton = document.querySelector('.add_employee_button');
+        addEmployeeButton.addEventListener('click', () => {
+            window.location.href = '../Registro/vistaRegistro.html';
+        });
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTRO</title>
+    <title>Registro</title>
 </head>
 <body>
     <section id="barra_superior">
@@ -26,30 +26,30 @@
     <section id="zone_sidebar">
         <aside id="sidebar">
             <nav id="inicio">
-                <a href="#">Inicio</a>
+                <a href="../Admin/DashboardAdmin.html">Inicio</a>
                 <i></i>
             </nav>
-            <nav id="ingresos">
-                <a href="#">Ingresos</a>
+            <nav id="ordenes">
+                <a href="#">Órdenes</a>
                 <i></i>
             </nav>
-            <nav id="taller">
-                <a href="#">Taller</a>
+            <nav id="clientes">
+                <a href="#">Clientes</a>
                 <i></i>
             </nav>
             <nav id="inventario">
                 <a href="#">Inventario</a>
                 <i></i>
             </nav>
+            <nav id="empleados">
+                <a href="../Admin/PanelEmpleados.html">Empleados</a>
+                <i></i>
+            </nav>
             <nav id="reportes">
                 <a href="#">Reportes</a>
                 <i></i>
             </nav>
-            <nav id="usuario">
-                <a href="#">Usuario</a>
-                <i></i>
-            </nav>
-            <nav id="configuraion">
+            <nav id="configuracion">
                 <a href="#">Configuracion</a>
                 <i></i>
             </nav>
@@ -147,5 +147,12 @@
         <button id="boton_registrar">Registrar</button>
 
     </section>
+    <script>
+        //hacer que boton de cancelar redirija a la pagina de panel de empleados
+        const cancelButton = document.getElementById('boton_cancelar');
+        cancelButton.addEventListener('click', () => {
+            window.location.href = '../Admin/PanelEmpleados.html';
+        });
+    </script>
 </body>
 </html>
