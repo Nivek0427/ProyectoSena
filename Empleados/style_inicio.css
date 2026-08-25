@@ -1,0 +1,566 @@
+/* --- Variables de Color (Tema Oscuro de la Imagen) --- */
+:root {
+    --bg-main: #060814;
+    --bg-sidebar: #0e1726;
+    --bg-card: #1b2e4b;
+    --text-main: #ffffff;
+    --text-muted: #888ea8;
+    --orange: #e2a03f;
+    --blue: #2196f3;
+    --green: #00e676;
+    --purple: #7c4dff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* --- Contenedor Base --- */
+.app-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* --- Barra Lateral --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-sidebar);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.brand-sub {
+    font-size: 0.8rem;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-items a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 16px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu-items a i {
+    font-size: 1.2rem;
+}
+
+.menu-items a.active, .menu-items a:hover {
+    color: var(--text-main);
+    background-color: var(--orange);
+}
+
+/* --- Área de Contenido Principal --- */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Encabezado */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-text h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.welcome-text p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+}
+
+.icon-notification {
+    position: relative;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Cuadrícula de Estadísticas Superiores */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: var(--bg-sidebar);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.stat-icon.orange { background: rgba(226, 160, 63, 0.15); color: var(--orange); }
+.stat-icon.blue { background: rgba(33, 150, 243, 0.15); color: var(--blue); }
+.stat-icon.green { background: rgba(0, 230, 118, 0.15); color: var(--green); }
+.stat-icon.purple { background: rgba(124, 77, 255, 0.15); color: var(--purple); }
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.stat-period {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Cuadrícula de Secciones Centrales */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--bg-sidebar);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.card-header {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Próxima Orden */
+.order-preview {
+    display: flex;
+    gap: 20px;
+}
+
+.motor-img {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.order-id {
+    color: var(--orange);
+    font-size: 0.85rem;
+}
+
+.tag-client {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.status-badge, .tag-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.status-badge.blue, .tag-status.blue { background: rgba(33, 150, 243, 0.2); color: var(--blue); }
+.status-badge.light-blue { background: rgba(0, 188, 212, 0.2); color: #00bcd4; }
+.status-badge.green { background: rgba(0, 230, 118, 0.2); color: var(--green); }
+
+.btn-primary {
+    margin-top: 10px;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Actividad Reciente */
+.activity-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.activity-list li {
+    display: flex;
+    gap: 12px;
+    font-size: 0.85rem;
+}
+
+.activity-list p {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.icon-green { color: var(--green); }
+
+/* Acciones Rápidas */
+.actions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-main);
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+}
+
+/* Órdenes de Hoy Inferiores */
+.today-orders {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--text-muted);
+}
+
+.orders-horizontal {
+    display: flex;
+    gap: 20px;
+}
+
+.mini-order-card {
+    background-color: var(--bg-sidebar);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.order-num {
+    color: var(--orange);
+    font-size: 0.8rem;
+}
+
+.mini-order-card h4 {
+    font-size: 1rem;
+}
+
+.mini-order-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------- Estilos Nuevos para la Vista de Órdenes --------------------------------------------------------- */
+
+/* Barra de Búsqueda Superior */
+.header-buscar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 320px;
+    gap: 10px;
+}
+
+.search-box i {
+    color: var(--text-muted);
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-main);
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* Título de Sección */
+.section-heading h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.section-heading p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Pestañas de Filtrado (Tabs) */
+.tabs-container {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.tab-btn.active {
+    color: var(--text-main);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid var(--blue);
+}
+
+.tab-badge {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.tab-badge.text-blue { background: rgba(33, 150, 243, 0.2); color: var(--blue); }
+.tab-badge.text-grey { background: rgba(255, 255, 255, 0.1); color: var(--text-muted); }
+
+/* Lista de Tarjetas de Órdenes (Layout Vertical) */
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-long-card {
+    background-color: var(--bg-sidebar);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.order-long-card:hover {
+    transform: translateX(4px);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.order-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-placeholder {
+    width: 65px;
+    height: 65px;
+    border: 2px solid var(--text-muted);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+}
+
+.order-main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.order-code {
+    color: var(--orange);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.order-main-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.order-main-info p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.order-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.order-status-date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.status-indicator {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.date-text {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* Botones Dinámicos de Detalle */
+.btn-detail {
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-detail:hover {
+    opacity: 0.9;
+}
+
+/* Clases de utilidad para los colores de estado */
+.text-blue { color: var(--blue); }
+.text-orange { color: var(--orange); }
+.text-purple { color: var(--purple); }
+.text-green { color: var(--green); }
+
+.bg-blue { background-color: var(--blue); }
+.bg-orange { background-color: var(--orange); }
+.bg-purple { background-color: var(--purple); }
+.bg-green { background-color: var(--green); }

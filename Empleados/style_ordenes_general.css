@@ -1,0 +1,368 @@
+/* --- Variables de Color (Tema Oscuro de la Imagen) --- */
+:root {
+    --bg-main: #060814;
+    --bg-sidebar: #0e1726;
+    --bg-card: #1b2e4b;
+    --text-main: #ffffff;
+    --text-muted: #888ea8;
+    --orange: #e2a03f;
+    --blue: #2196f3;
+    --green: #00e676;
+    --purple: #7c4dff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* --- Contenedor Base --- */
+.contenedor-aplicacion {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* --- Barra Lateral --- */
+.barra-lateral {
+    width: 260px;
+    background-color: var(--bg-sidebar);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icono-logo {
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.texto-marca {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-marca {
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.sub-marca {
+    font-size: 0.8rem;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.elementos-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.elementos-menu a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 16px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.elementos-menu a i {
+    font-size: 1.2rem;
+}
+
+.elementos-menu a.activo, .elementos-menu a:hover {
+    color: var(--text-main);
+    background-color: var(--orange);
+}
+
+/* --- Área de Contenido Principal --- */
+.contenido-principal {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Encabezado */
+.encabezado-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto-bienvenida h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.texto-bienvenida p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.iconos-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+}
+
+.icono-notificacion {
+    position: relative;
+    cursor: pointer;
+}
+
+.insignia {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Cuadrícula de Estadísticas Superiores */
+.cuadrilla-estadisticas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-estadistica {
+    background-color: var(--bg-sidebar);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icono-estadistica {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.icono-estadistica.naranja { background: rgba(226, 160, 63, 0.15); color: var(--orange); }
+.icono-estadistica.azul { background: rgba(33, 150, 243, 0.15); color: var(--blue); }
+.icono-estadistica.verde { background: rgba(0, 230, 118, 0.15); color: var(--green); }
+.icono-estadistica.purpura { background: rgba(124, 77, 255, 0.15); color: var(--purple); }
+
+.info-estadistica {
+    display: flex;
+    flex-direction: column;
+}
+
+.numero-estadistica {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.etiqueta-estadistica {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.periodo-estadistica {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Cuadrícula de Secciones Centrales */
+.cuadrilla-panel {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: var(--bg-sidebar);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.encabezado-tarjeta {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Próxima Orden */
+.vista-previa-orden {
+    display: flex;
+    gap: 20px;
+}
+
+.imagen-motor {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.detalles-orden {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.id-orden {
+    color: var(--orange);
+    font-size: 0.85rem;
+}
+
+.etiqueta-cliente {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.insignia-estado, .etiqueta-estado {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.insignia-estado.azul, .etiqueta-estado.azul { background: rgba(33, 150, 243, 0.2); color: var(--blue); }
+.insignia-estado.azul-claro { background: rgba(0, 188, 212, 0.2); color: #00bcd4; }
+.insignia-estado.verde { background: rgba(0, 230, 118, 0.2); color: var(--green); }
+
+.boton-primario {
+    margin-top: 10px;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Actividad Reciente */
+.lista-actividad {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-actividad li {
+    display: flex;
+    gap: 12px;
+    font-size: 0.85rem;
+}
+
+.lista-actividad p {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.icono-verde { color: var(--green); }
+
+/* Acciones Rápidas */
+.cuadrilla-acciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.boton-accion {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-main);
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+}
+
+/* Órdenes de Hoy Inferiores */
+.ordenes-hoy {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.titulo-seccion {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--text-muted);
+}
+
+.ordenes-horizontal {
+    display: flex;
+    gap: 20px;
+}
+
+.minitarjeta-orden {
+    background-color: var(--bg-sidebar);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.numero-orden {
+    color: var(--orange);
+    font-size: 0.8rem;
+}
+
+.minitarjeta-orden h4 {
+    font-size: 1rem;
+}
+
+.minitarjeta-orden p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}

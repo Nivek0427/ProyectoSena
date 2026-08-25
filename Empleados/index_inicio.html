@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobinados Herver - Panel de Control</title>
+    <!-- Bootstrap Icons (No se modifican sus clases internas) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style_ordenes_general.css">
+</head>
+<body>
+
+    <!-- Contenedor General de la Aplicación -->
+    <div class="contenedor-aplicacion">
+
+        <!-- BARRA LATERAL -->
+        <aside class="barra-lateral">
+            <div class="marca">
+                <i class="bi bi-gear-fill icono-logo"></i>
+                <div class="texto-marca">
+                    <span class="titulo-marca">BOBINADOS</span>
+                    <span class="sub-marca">HERVER</span>
+                </div>
+            </div>
+            <nav class="elementos-menu">
+                <a href="#" class="activo"><i class="bi bi-house-door"></i> <span>Inicio</span></a>
+                <a href="ordenes.html"><i class="bi bi-clipboard-data"></i> <span>Mis Órdenes</span></a>
+                <a href="#"><i class="bi bi-clock-history"></i> <span>Historial</span></a>
+                <a href="#"><i class="bi bi-box-seam"></i> <span>Inventario</span></a>
+            </nav>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido-principal">
+
+            <!-- Encabezado de Bienvenida -->
+            <header class="encabezado-principal">
+                <div class="texto-bienvenida">
+                    <h1>Hola, Weimar!</h1>
+                    <p>Bienvenido de vuelta</p>
+                </div>
+                <div class="iconos-encabezado">
+                    <div class="icono-notificacion"><i class="bi bi-bell"></i><span class="insignia"></span></div>
+                    <div class="avatar-usuario"><i class="bi bi-person-circle"></i></div>
+                </div>
+            </header>
+
+            <!-- Fila Superior: Tarjetas de Estadísticas -->
+            <section class="cuadrilla-estadisticas">
+                <div class="tarjeta-estadistica">
+                    <div class="icono-estadistica naranja"><i class="bi bi-journal-text"></i></div>
+                    <div class="info-estadistica">
+                        <span class="numero-estadistica">8</span>
+                        <span class="etiqueta-estadistica">Mis asignadas</span>
+                        <span class="periodo-estadistica">Este mes</span>
+                    </div>
+                </div>
+                <div class="tarjeta-estadistica">
+                    <div class="icono-estadistica azul"><i class="bi bi-tools"></i></div>
+                    <div class="info-estadistica">
+                        <span class="numero-estadistica">3</span>
+                        <span class="etiqueta-estadistica">En proceso</span>
+                        <span class="periodo-estadistica">Este mes</span>
+                    </div>
+                </div>
+                <div class="tarjeta-estadistica">
+                    <div class="icono-estadistica verde"><i class="bi bi-check-circle"></i></div>
+                    <div class="info-estadistica">
+                        <span class="numero-estadistica">15</span>
+                        <span class="etiqueta-estadistica">Finalizadas</span>
+                        <span class="periodo-estadistica">Este mes</span>
+                    </div>
+                </div>
+                <div class="tarjeta-estadistica">
+                    <div class="icono-estadistica purpura"><i class="bi bi-calendar-event"></i></div>
+                    <div class="info-estadistica">
+                        <span class="numero-estadistica">4</span>
+                        <span class="etiqueta-estadistica">Hoy</span>
+                        <span class="periodo-estadistica">Este mes</span>
+                    </div>
+                </div>
+            </section> 
+
+            <!-- Fila Central: Bloques de Información -->
+            <section class="cuadrilla-panel">
+                
+                <!-- Próxima Orden -->
+                <div class="tarjeta proxima-orden">
+                    <div class="encabezado-tarjeta"><i class="bi bi-truck"></i> PRÓXIMA ORDEN</div>
+                    <div class="vista-previa-orden">
+                        <div class="imagen-motor">⚙️</div>
+                        <div class="detalles-orden">
+                            <h3>Motor 10HP</h3>
+                            <p class="id-orden">#1054</p>
+                            <span class="etiqueta-cliente">Cliente: Motos S.A</span>
+                            <span class="etiqueta-estado azul">Diagnóstico</span>
+                            <button class="boton-primario">CONSULTAR TRABAJO <i class="bi bi-arrow-right-short"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actividad Reciente -->
+                <div class="tarjeta actividad-reciente">
+                    <div class="encabezado-tarjeta"><i class="bi bi-lightning"></i> ACTIVIDAD RECIENTE</div>
+                    <ul class="lista-actividad">
+                        <li><i class="bi bi-check-circle-fill icono-verde"></i> <div><strong>Diagnóstico registrado</strong><p>Orden #1054 • Hace 5min</p></div></li>
+                        <li><i class="bi bi-check-circle-fill icono-verde"></i> <div><strong>Materiales actualizados</strong><p>Orden #1040 • Hace 34min</p></div></li>
+                        <li><i class="bi bi-check-circle-fill icono-verde"></i> <div><strong>Bobinado en proceso</strong><p>Orden #1024 • Hace 1h</p></div></li>
+                    </ul>
+                </div>
+
+                <!-- Acciones Rápidas -->
+                <div class="tarjeta acciones-rapidas">
+                    <div class="encabezado-tarjeta"><i class="bi bi-bolt"></i> ACCIONES RÁPIDAS</div>
+                    <div class="cuadrilla-acciones">
+                        <button class="boton-accion"><i class="bi bi-plus-circle"></i> Reg. Diagnóstico</button>
+                        <button class="boton-accion"><i class="bi bi-camera"></i> Subir Foto</button>
+                        <button class="boton-accion"><i class="bi bi-arrow-repeat"></i> Actualizar</button>
+                        <button class="boton-accion"><i class="bi bi-list-task"></i> Ver Más</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fila Inferior: Órdenes de Hoy -->
+            <section class="ordenes-hoy">
+                <div class="titulo-seccion"><i class="bi bi-calendar3"></i> MIS ÓRDENES DE HOY</div>
+                <div class="ordenes-horizontal">
+                    <div class="minitarjeta-orden">
+                        <span class="numero-orden">#1024</span>
+                        <h4>Motor 3HP</h4>
+                        <p>Cliente: Motos S.A</p>
+                        <span class="insignia-estado azul">Diagnóstico</span>
+                    </div>
+                    <div class="minitarjeta-orden">
+                        <span class="numero-orden">#1056</span>
+                        <h4>Motor 15HP</h4>
+                        <p>Cliente: Agroindustria</p>
+                        <span class="insignia-estado azul-claro">Reparación</span>
+                    </div>
+                    <div class="minitarjeta-orden">
+                        <span class="numero-orden">#1002</span>
+                        <h4>Bomba Pedrollo</h4>
+                        <p>Cliente: Taller ABC</p>
+                        <span class="insignia-estado verde">En espera</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,211 @@
+/* --- Estilos Nuevos para la Vista de Órdenes --- */
+
+:root {
+    --bg-main: #060814;
+    --bg-sidebar: #0e1726;
+    --bg-card: #1b2e4b;
+    --text-main: #ffffff;
+    --text-muted: #888ea8;
+    --orange: #e2a03f;
+    --blue: #2196f3;
+    --green: #00e676;
+    --purple: #7c4dff;
+}
+
+/* Barra de Búsqueda Superior */
+.header-buscar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.caja-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 320px;
+    gap: 10px;
+}
+
+.caja-busqueda i {
+    color: var(--text-muted);
+}
+
+.caja-busqueda input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-main);
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* Título de Sección */
+.encabezado-seccion h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.encabezado-seccion p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Pestañas de Filtrado (Tabs) */
+.contenedor-pestanas {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0px;
+}
+
+.boton-pestana {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.boton-pestana.activo {
+    color: var(--text-main);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid var(--blue);
+}
+
+.insignia-pestana {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.insignia-pestana.texto-azul { background: rgba(33, 150, 243, 0.2); color: var(--blue); }
+.insignia-pestana.texto-gris { background: rgba(255, 255, 255, 0.1); color: var(--text-muted); }
+
+/* Lista de Tarjetas de Órdenes (Layout Vertical) */
+.lista-ordenes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarjeta-larga-orden {
+    background-color: var(--bg-sidebar);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-larga-orden:hover {
+    transform: translateX(4px);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.orden-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.marcador-imagen {
+    width: 65px;
+    height: 65px;
+    border: 2px solid var(--text-muted);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+}
+
+.info-principal-orden {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.codigo-orden {
+    color: var(--orange);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.info-principal-orden h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.info-principal-orden p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.orden-derecha {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.estado-fecha-orden {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.indicador-estado {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.texto-fecha {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* Botones Dinámicos de Detalle */
+.boton-detalle {
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.boton-detalle:hover {
+    opacity: 0.9;
+}
+
+/* Clases de utilidad para los colores de estado */
+.texto-azul { color: var(--blue); }
+.texto-naranja { color: var(--orange); }
+.texto-purpura { color: var(--purple); }
+.texto-verde { color: var(--green); }
+
+.fondo-azul { background-color: var(--blue); }
+.fondo-naranja { background-color: var(--orange); }
+.fondo-purpura { background-color: var(--purple); }
+.fondo-verde { background-color: var(--green); }
+
+

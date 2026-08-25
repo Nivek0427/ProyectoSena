@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobinados Herver - Mis Órdenes</title>
+    <!-- CDN de Bootstrap Icons corregido y enlazado -->
+    <link rel="stylesheet" href="https://jsdelivr.net">
+    <link rel="stylesheet" href="style_ordenes_general.css">
+    <link rel="stylesheet" href="style_ordenes.css">
+</head>
+<body>
+
+    <div class="contenedor-aplicacion">
+        
+        <!-- BARRA LATERAL (Idéntica a la anterior, estructurada en español) -->
+        <aside class="barra-lateral">
+            <div class="marca">
+                <i class="bi bi-gear-fill icono-logo"></i>
+                <div class="texto-marca">
+                    <span class="titulo-marca">BOBINADOS</span>
+                    <span class="sub-marca">HERVER</span>
+                </div>
+            </div>
+            <nav class="elementos-menu">
+                <a href="index.html"><i class="bi bi-house-door"></i> <span>Inicio</span></a>
+                <a href="#" class="activo"><i class="bi bi-clipboard-data"></i> <span>Mis Órdenes</span></a>
+                <a href="#"><i class="bi bi-clock-history"></i> <span>Historial</span></a>
+                <a href="#"><i class="bi bi-box-seam"></i> <span>Inventario</span></a>
+            </nav>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido-principal">
+            
+            <!-- Barra de búsqueda superior -->
+            <header class="header-buscar">
+                <div class="caja-busqueda">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Buscar Órdenes">
+                </div>
+                <div class="iconos-encabezado">
+                    <div class="icono-notificacion"><i class="bi bi-bell"></i><span class="insignia"></span></div>
+                    <div class="avatar-usuario"><i class="bi bi-person-circle"></i></div>
+                </div>
+            </header>
+
+            <!-- Título de sección -->
+            <section class="encabezado-seccion">
+                <h2>Mis Órdenes</h2>
+                <p>Órdenes asignadas</p>
+            </section>
+
+            <!-- Filtros / Pestañas (Tabs) -->
+            <nav class="contenedor-pestanas">
+                <button class="boton-pestana activo">Todas <span class="insignia-pestana texto-azul">8</span></button>
+                <button class="boton-pestana">En proceso <span class="insignia-pestana texto-gris">4</span></button>
+                <button class="boton-pestana">En pruebas <span class="insignia-pestana texto-gris">2</span></button>
+                <button class="boton-pestana">Listos <span class="insignia-pestana texto-azul">1</span></button>
+            </nav>
+
+            <!-- Lista de Tarjetas de Órdenes -->
+            <section class="lista-ordenes">
+                
+                <!-- Tarjeta 1 (Azul) -->
+                <div class="tarjeta-larga-orden">
+                    <div class="orden-izquierda">
+                        <div class="marcador-imagen"><i class="bi bi-image"></i></div>
+                        <div class="info-principal-orden">
+                            <span class="codigo-orden">#1054</span>
+                            <h3>Motor 10HP</h3>
+                            <p>Cliente: Molino S.A</p>
+                        </div>
+                    </div>
+                    <div class="orden-derecha">
+                        <div class="estado-fecha-orden">
+                            <span class="indicador-estado texto-azul">• En diagnóstico</span>
+                            <span class="texto-fecha">Asignada: dd/mm/aaaa</span>
+                        </div>
+                        <button class="boton-detalle fondo-azul">Ver detalle</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 (Naranja) -->
+                <div class="tarjeta-larga-orden">
+                    <div class="orden-izquierda">
+                        <div class="marcador-imagen"><i class="bi bi-image"></i></div>
+                        <div class="info-principal-orden">
+                            <span class="codigo-orden">#1054</span>
+                            <h3>Motor 10HP</h3>
+                            <p>Cliente: Molino S.A</p>
+                        </div>
+                    </div>
+                    <div class="orden-derecha">
+                        <div class="estado-fecha-orden">
+                            <span class="indicador-estado texto-naranja">• En diagnóstico</span>
+                            <span class="texto-fecha">Asignada: dd/mm/aaaa</span>
+                        </div>
+                        <button class="boton-detalle fondo-naranja">Ver detalle</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 (Morada) -->
+                <div class="tarjeta-larga-orden">
+                    <div class="orden-izquierda">
+                        <div class="marcador-imagen"><i class="bi bi-image"></i></div>
+                        <div class="info-principal-orden">
+                            <span class="codigo-orden">#1054</span>
+                            <h3>Motor 10HP</h3>
+                            <p>Cliente: Molino S.A</p>
+                        </div>
+                    </div>
+                    <div class="orden-derecha">
+                        <div class="estado-fecha-orden">
+                            <span class="indicador-estado texto-purpura">• En diagnóstico</span>
+                            <span class="texto-fecha">Asignada: dd/mm/aaaa</span>
+                        </div>
+                        <button class="boton-detalle fondo-purpura">Ver detalle</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4 (Verde) -->
+                <div class="tarjeta-larga-orden">
+                    <div class="orden-izquierda">
+                        <div class="marcador-imagen"><i class="bi bi-image"></i></div>
+                        <div class="info-principal-orden">
+                            <span class="codigo-orden">#1054</span>
+                            <h3>Motor 10HP</h3>
+                            <p>Cliente: Molino S.A</p>
+                        </div>
+                    </div>
+                    <div class="orden-derecha">
+                        <div class="estado-fecha-orden">
+                            <span class="indicador-estado texto-verde">• En diagnóstico</span>
+                            <span class="texto-fecha">Asignada: dd/mm/aaaa</span>
+                        </div>
+                        <button class="boton-detalle fondo-verde">Ver detalle</button>
+                    </div>
+                </div>
+
+            </section>
+
+         </main>
+    </div>
+
+</body>
+</html>
+
+
+
+
